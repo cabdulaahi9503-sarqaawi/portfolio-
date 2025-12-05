@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Abdullahi - Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline id="video-bg">
+        <source src="galaxy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Hi There,</h3>
+            <h1>I'm <span>Abdullahi</span></h1>
+            <h3>I Am a <span class="typing-text"></span></h3>
+            <p>Waxaan ahay Web Developer dhiso websites casri ah oo qurux badan.</p>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100081586161161140&mibextid=rS40aB7S9Ucbxw6v" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@apdalla___444?_t=ZM-8x5S5gmFGkP&_r=1" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/qr/GEQVUL6GJ2OAO1" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <a href="#skills" class="btn">View My Work</a>
+        </div>
+
+        <div class="home-img">
+            <img src="me.jpg" alt="Profile Picture">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="heading">About <span>Me</span></div>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="sawir.jpeg" alt="About Me">
+            </div>
+            <div class="about-text">
+                <h2>I'm Abdullahi</h2>
+                <p>Waxaan ahay arday barta Computer Science, waxaan xiiseeyaa Web Design iyo Programming. Mar walba waxaan jecelahay inaan barto xirfado cusub.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="heading">My <span>Skills</span></div>
+        <div class="skills-container">
+            <div class="skill-box"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+            <div class="skill-box"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
+            <div class="skill-box"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="heading">Contact <span>Me</span></div>
+
+        <form id="contact-form">
+            
+            <div class="input-box">
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <input type="submit" value="Send Message" class="btn"> 
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2025 by Abdullahi | All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

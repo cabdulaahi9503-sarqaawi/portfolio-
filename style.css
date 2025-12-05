@@ -1,0 +1,323 @@
+/* Guud ahaan Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f1f21; /* Midabka Madow (Waxa loo isticmaalaa qoraalka ama box-yada dhexdiisa) */
+    --second-bg-color: #2b2b2b; /* Midab Madow oo labaad (Input fields) */
+    --text-color: #fff;       /* Midabka Qoraalka Caddaan */
+    --main-color: #a855f7;    /* Midabka Guduudka/Purple-ka */
+}
+
+/* 1. Xalka Video Background-ka: Kani wuxuu u ogolaanayaa video-ga inuu shaqeeyo */
+body {
+    background: transparent; 
+    color: var(--text-color);
+}
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; 
+    /* Opacity waa laga saaray si video-gu u iftiimo oo uu tayadiisa u haysto */
+}
+
+/* 2. Navbar-ka: Transparent, Horizontal, iyo Hover-kii Unbelievable */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: transparent; /* Transparent si video-gu u muuqdo */
+    backdrop-filter: blur(3px); /* Waxaa lagu daray blur yar si ay u caddaato */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+}
+
+/* Ka saarista Magaca (Logo-ga) - Haddii aad rabto inaad gabi ahaanba ka saarto CSS ahaan */
+.logo {
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+/* Hubinta in Link-yada ay yihiin Horizontal */
+.nav-links {
+    display: flex; /* Horizontal */
+    list-style: none; /* Ka saarista dhibcaha */
+    margin-left: auto; /* Ku celi xagga midigta maadaama logo-gii maqan yahay */
+}
+
+.nav-links li {
+    margin-left: 4rem;
+}
+
+/* Hover Effect-ka Unbelievable */
+.nav-links a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative; 
+    transition: color 0.3s ease;
+}
+
+/* Line-ka ka hooseeya */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0; 
+    height: 3px; 
+    background: var(--main-color); 
+    border-radius: 5px;
+    transition: width 0.4s ease; 
+}
+
+.nav-links a:hover {
+    color: var(--main-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%; 
+    box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color); 
+}
+
+/* 3. Sections-ka: DHAMMAAN Sections-ka background-kooda waa transparent ama hufan */
+section {
+    background: transparent; 
+    padding-top: 8rem; 
+    min-height: 100vh;
+    padding-bottom: 2rem;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+}
+
+/* Social Icons: Hagaajinta Size-ka iyo Color-ka */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem; /* La wayneeyay */
+    height: 3.5rem; /* La wayneeyay */
+    background: transparent;
+    border: .2rem solid var(--text-color); /* Border-ka caddaan/text */
+    border-radius: 50%;
+    font-size: 1.8rem; /* Icon-ka la wayneeyay */
+    color: var(--main-color); /* Midabka Icon-ka waa Purple */
+    margin: 2rem 1rem 2rem 0;
+    transition: .5s ease;
+}
+
+.social-icons a:hover {
+    background: var(--main-color);
+    color: var(--bg-color); /* Qoraalka wuxuu noqonayaa madow */
+    border-color: transparent; 
+    box-shadow: 0 0 15px var(--main-color), 0 0 30px var(--main-color);
+}
+
+.home-content h3 { font-size: 2rem; font-weight: 700; }
+.home-content h1 { font-size: 4rem; font-weight: 700; line-height: 1.3; }
+.home-content h1 span { color: var(--main-color); }
+.home-content p { font-size: 1.2rem; margin: 1.5rem 0; }
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--main-color);
+    font-size: 1.2rem;
+    color: var(--bg-color);
+    font-weight: 600;
+    margin-top: 1.5rem; 
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: none; 
+    opacity: 0.9;
+}
+
+.home-img img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--main-color);
+    transition: all 0.4s ease; 
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 40px var(--main-color), 0 0 80px var(--main-color); 
+    transform: scale(1.05); 
+}
+
+.heading { text-align: center; font-size: 3rem; margin-bottom: 3rem; }
+.heading span { color: var(--main-color); }
+
+/* About Section */
+.about {
+    background: rgba(43, 43, 43, 0.5); /* Background hufan oo jilicsan si qoraalka loo arko */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img {
+    width: 20vw;
+    border-radius: 20px;
+}
+
+/* Skills Section */
+.skills {
+    background: rgba(43, 43, 43, 0.5);
+}
+
+.skills h2 { margin-bottom: 3rem; }
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Skills Box: Background iyo Hover Effect */
+.skill-box {
+    background: rgba(43, 43, 43, 0.75); 
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid var(--main-color);
+    transition: transform 0.4s, box-shadow 0.4s; 
+}
+
+.skill-box:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px var(--main-color), 0 0 30px var(--main-color); 
+    border-color: var(--text-color); 
+}
+
+.skill-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+/* Contact Section Style - Waa sidii hore si box-ka loo yareeyo */
+.contact {
+    background: transparent; 
+    padding: 5rem 0; 
+}
+
+.contact form {
+    max-width: 50rem; /* Box-ka waa mid yar */
+    margin: 1rem auto;
+    text-align: center;
+    background: rgba(31, 31, 33, 0.95); 
+    padding: 3rem; 
+    border-radius: 1rem; 
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+/* Kani wuxuu hubinayaa in Field-yada ay isdaba-joog yihiin (Vertical) */
+.contact form .input-box {
+    display: flex;
+    flex-direction: column; /* Isbeddelka muhiimka ah: Column si ay u kala dambeeyaan */
+    gap: 1.5rem; /* Meel u dhaxaysa midkiiba */
+    margin-bottom: 1.5rem; 
+    width: 100%; 
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    background: var(--second-bg-color); 
+    color: var(--text-color); 
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: .4rem;
+    border: 1px solid var(--main-color);
+    width: 100%; /* Hadda dhammaantood waa 100% */
+}
+
+/* Sharcigii hore ee 49% waa la saaray, maxaa yeelay dhamaantood waa 100% */
+
+.contact form textarea {
+    width: 100%; 
+    margin-top: 0.7rem;
+    resize: vertical;
+}
+
+/* Badhanka "Send Message" - Waa sidii hore oo la yareeyay */
+.contact form .btn {
+    width: 20rem; 
+    margin-top: 2rem;
+    background: var(--main-color); 
+    color: var(--second-bg-color);
+    padding: 1rem 3rem; 
+    border-radius: .4rem;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.contact form .btn:hover {
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+
+/* --- Media Queries --- */
+/* Media query hadda macno badan ma samaynayso maxaa yeelay qaabka desktop-ka wuxuu u eg yahay mobilka */
+@media (max-width: 768px) {
+    .contact form {
+        padding: 2rem 1.5rem; 
+        max-width: 95%; 
+    }
+    
+    .contact form .input-box {
+        gap: 1rem; /* Inyar yaree meesha u dhaxaysa mobilka */
+        margin-bottom: 1rem;
+    }
+    
+    .contact form .input-box input {
+        margin-bottom: 0; /* Ka saar margin-kii hore hadda waxaa qabtay gap-ka */
+    }
+
+    .contact form .btn {
+        width: 80%; 
+    }
+}
